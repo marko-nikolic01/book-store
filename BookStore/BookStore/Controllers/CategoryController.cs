@@ -1,6 +1,7 @@
 ﻿using BookStore.Data;
 using BookStore.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 
 namespace BookStore.Controllers
@@ -56,11 +57,44 @@ namespace BookStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Categories.Add(category);
+                _db.Categories.Update(category);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View();
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Category category = _db.Categories.Find(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+            return View(category);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteFromDb(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Category category = _db.Categories.Find(id);
+            if (category == null)
+            {
+                return NotFound();
+            }
+            _db.Categories.Remove(category);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
