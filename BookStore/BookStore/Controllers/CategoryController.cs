@@ -1,4 +1,5 @@
 ﻿using BookStore.DataAccess.Data;
+using BookStore.DataAccess.Repository.IRepository;
 using BookStore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -8,15 +9,15 @@ namespace BookStore.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public CategoryController(ApplicationDbContext db)
+        private readonly ICategoryRepository _categoryRepository;
+        public CategoryController(ICategoryRepository categoryRepository)
         {
-            _db = db;
+            _categoryRepository = categoryRepository;
         }
 
         public IActionResult Index()
         {
-            List<Category> objCategoryList = _db.Categories.ToList();
+            List<Category> objCategoryList = _categoryRepository.GetAll().ToList();
             return View(objCategoryList);
         }
 
@@ -30,8 +31,8 @@ namespace BookStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Categories.Add(category);
-                _db.SaveChanges();
+                _categoryRepository.Add(category);
+                _categoryRepository.Save();
                 TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
@@ -45,7 +46,7 @@ namespace BookStore.Controllers
                 return NotFound();
             }
 
-            Category category = _db.Categories.Find(id);
+            Category category = _categoryRepository.GetFirstOrDefault(o => o.Id == id);
             if (category == null)
             {
                 return NotFound();
@@ -58,8 +59,8 @@ namespace BookStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Categories.Update(category);
-                _db.SaveChanges();
+                _categoryRepository.Update(category);
+                _categoryRepository.Save();
                 TempData["success"] = "Category edited successfully";
                 return RedirectToAction("Index");
             }
@@ -73,7 +74,7 @@ namespace BookStore.Controllers
                 return NotFound();
             }
 
-            Category category = _db.Categories.Find(id);
+            Category category = _categoryRepository.GetFirstOrDefault(o => o.Id == id);
             if (category == null)
             {
                 return NotFound();
@@ -89,13 +90,13 @@ namespace BookStore.Controllers
                 return NotFound();
             }
 
-            Category category = _db.Categories.Find(id);
+            Category category = _categoryRepository.GetFirstOrDefault(o => o.Id == id);
             if (category == null)
             {
                 return NotFound();
             }
-            _db.Categories.Remove(category);
-            _db.SaveChanges();
+            _categoryRepository.Remove(category);
+            _categoryRepository.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
