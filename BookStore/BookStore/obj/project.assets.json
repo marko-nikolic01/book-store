@@ -1132,6 +1132,42 @@
             "rid": "win"
           }
         }
+      },
+      "BookStore.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "BookStore.Models": "1.0.0",
+          "BookStore.Utility": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9"
+        },
+        "compile": {
+          "bin/placeholder/BookStore.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookStore.DataAccess.dll": {}
+        }
+      },
+      "BookStore.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/BookStore.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookStore.Models.dll": {}
+        }
+      },
+      "BookStore.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/BookStore.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookStore.Utility.dll": {}
+        }
       }
     }
   },
@@ -3452,10 +3488,27 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BookStore.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../BookStore.DataAccess/BookStore.DataAccess.csproj",
+      "msbuildProject": "../BookStore.DataAccess/BookStore.DataAccess.csproj"
+    },
+    "BookStore.Models/1.0.0": {
+      "type": "project",
+      "path": "../BookStore.Models/BookStore.Models.csproj",
+      "msbuildProject": "../BookStore.Models/BookStore.Models.csproj"
+    },
+    "BookStore.Utility/1.0.0": {
+      "type": "project",
+      "path": "../BookStore.Utility/BookStore.Utility.csproj",
+      "msbuildProject": "../BookStore.Utility/BookStore.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "BookStore.DataAccess >= 1.0.0",
+      "BookStore.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.9"
@@ -3488,7 +3541,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore.DataAccess\\BookStore.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore.DataAccess\\BookStore.DataAccess.csproj"
+            },
+            "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore.Models\\BookStore.Models.csproj": {
+              "projectPath": "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore.Models\\BookStore.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

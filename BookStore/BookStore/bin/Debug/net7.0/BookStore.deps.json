@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "BookStore/1.0.0": {
         "dependencies": {
+          "BookStore.DataAccess": "1.0.0",
+          "BookStore.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.9"
@@ -612,6 +614,27 @@
             "fileVersion": "5.0.20.51904"
           }
         }
+      },
+      "BookStore.DataAccess/1.0.0": {
+        "dependencies": {
+          "BookStore.Models": "1.0.0",
+          "BookStore.Utility": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9"
+        },
+        "runtime": {
+          "BookStore.DataAccess.dll": {}
+        }
+      },
+      "BookStore.Models/1.0.0": {
+        "runtime": {
+          "BookStore.Models.dll": {}
+        }
+      },
+      "BookStore.Utility/1.0.0": {
+        "runtime": {
+          "BookStore.Utility.dll": {}
+        }
       }
     }
   },
@@ -1089,6 +1112,21 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
+    },
+    "BookStore.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BookStore.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BookStore.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

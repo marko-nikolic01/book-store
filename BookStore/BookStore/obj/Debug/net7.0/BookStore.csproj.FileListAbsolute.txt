@@ -73,3 +73,9 @@ C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\obj\Debug\net7.0\
 C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\obj\Debug\net7.0\BookStore.pdb
 C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\obj\Debug\net7.0\BookStore.genruntimeconfig.cache
 C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\obj\Debug\net7.0\ref\BookStore.dll
+C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\bin\Debug\net7.0\BookStore.DataAccess.dll
+C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\bin\Debug\net7.0\BookStore.Models.dll
+C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\bin\Debug\net7.0\BookStore.Utility.dll
+C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\bin\Debug\net7.0\BookStore.DataAccess.pdb
+C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\bin\Debug\net7.0\BookStore.Models.pdb
+C:\Users\Marko\Documents\GitHub\book-store\BookStore\BookStore\bin\Debug\net7.0\BookStore.Utility.pdb
