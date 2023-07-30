@@ -15,8 +15,8 @@ namespace BookStore.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            List<Book> objCategoryList = _unitOfWork.BookRepository.GetAll().ToList();
-            return View(objCategoryList);
+            List<Book> objBookList = _unitOfWork.BookRepository.GetAll().ToList();
+            return View(objBookList);
         }
 
         public IActionResult Create()
