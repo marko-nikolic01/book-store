@@ -25,24 +25,14 @@
                 Author
             </th>
             <th>
-                Description
-            </th>
-            <th>
                 ISBN
-            </th>
-            <th>
-                List Price
             </th>
             <th>
                 Price
             </th>
             <th>
-                Price 50-99
+                Category
             </th>
-            <th>
-                Price 100+
-            </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -56,22 +46,13 @@
                     @obj.Author
                 </td>
                 <td>
-                    @obj.Description
-                </td>
-                <td>
                     @obj.ISBN
                 </td>
                 <td>
                     @obj.ListPrice
                 </td>
                 <td>
-                    @obj.Price
-                </td>
-                <td>
-                    @obj.Price50
-                </td>
-                <td>
-                    @obj.Price100
+                    @obj.Category.Name
                 </td>
                 <td>
                     <div class="w-75 btn-group" role="group">
