@@ -9,15 +9,15 @@ namespace BookStore.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ICategoryRepository _categoryRepository;
-        public CategoryController(ICategoryRepository categoryRepository)
+        private readonly IUnitOfWork _unitOfWork;
+        public CategoryController(IUnitOfWork unitOfWork)
         {
-            _categoryRepository = categoryRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            List<Category> objCategoryList = _categoryRepository.GetAll().ToList();
+            List<Category> objCategoryList = _unitOfWork.CategoryRepository.GetAll().ToList();
             return View(objCategoryList);
         }
 
@@ -31,8 +31,8 @@ namespace BookStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                _categoryRepository.Add(category);
-                _categoryRepository.Save();
+                _unitOfWork.CategoryRepository.Add(category);
+                _unitOfWork.Save();
                 TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
@@ -46,7 +46,7 @@ namespace BookStore.Controllers
                 return NotFound();
             }
 
-            Category category = _categoryRepository.GetFirstOrDefault(o => o.Id == id);
+            Category category = _unitOfWork.CategoryRepository.GetFirstOrDefault(o => o.Id == id);
             if (category == null)
             {
                 return NotFound();
@@ -59,8 +59,8 @@ namespace BookStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                _categoryRepository.Update(category);
-                _categoryRepository.Save();
+                _unitOfWork.CategoryRepository.Update(category);
+                _unitOfWork.Save();
                 TempData["success"] = "Category edited successfully";
                 return RedirectToAction("Index");
             }
@@ -74,7 +74,7 @@ namespace BookStore.Controllers
                 return NotFound();
             }
 
-            Category category = _categoryRepository.GetFirstOrDefault(o => o.Id == id);
+            Category category = _unitOfWork.CategoryRepository.GetFirstOrDefault(o => o.Id == id);
             if (category == null)
             {
                 return NotFound();
@@ -90,13 +90,13 @@ namespace BookStore.Controllers
                 return NotFound();
             }
 
-            Category category = _categoryRepository.GetFirstOrDefault(o => o.Id == id);
+            Category category = _unitOfWork.CategoryRepository.GetFirstOrDefault(o => o.Id == id);
             if (category == null)
             {
                 return NotFound();
             }
-            _categoryRepository.Remove(category);
-            _categoryRepository.Save();
+            _unitOfWork.CategoryRepository.Remove(category);
+            _unitOfWork.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
