@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\BookStore.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore\\wwwroot\\Images\\Book\\1d6097a1-f885-4e3b-be52-8616ec66244e.jpg",
+      "PackagePath": "staticwebassets\\Images\\Book\\1d6097a1-f885-4e3b-be52-8616ec66244e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore\\wwwroot\\Images\\Book\\5a1e90b5-d4cf-4bff-a6e3-48e5eedf3730.jpg",
+      "PackagePath": "staticwebassets\\Images\\Book\\5a1e90b5-d4cf-4bff-a6e3-48e5eedf3730.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore\\wwwroot\\Images\\Book\\d365b8e9-cdc2-44c8-b6b5-7109c9c9d32e.jpg",
+      "PackagePath": "staticwebassets\\Images\\Book\\d365b8e9-cdc2-44c8-b6b5-7109c9c9d32e.jpg"
+    },
+    {
       "Id": "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

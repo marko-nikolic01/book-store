@@ -1,4 +1,4 @@
-﻿@model Book
+﻿@model BookViewModel
 
 <div class="card shadow border-0 mt-4">
     <div class="card-header bg-primary bg-gradient ml-0 py-3">
@@ -7,48 +7,60 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form method="post">
-            <input asp-for="Id" value="0" hidden />
+        <form method="post" enctype="multipart/form-data">
+            <input asp-for="Book.Id" value="0" hidden />
+            <input asp-for="Book.ImageUrl" value="ok" hidden />
             <div class="border p-3 mt-4">
                 <div class="mb-3 row p-1 row">
-                    <label asp-for=Title class="p-0"></label>
-                    <input asp-for=Title type="text" class="form-control border-1 border-secondary" />
-                    <span asp-validation-for=Title class="text-danger"></span>
+                    <label asp-for=Book.Title class="p-0"></label>
+                    <input asp-for=Book.Title type="text" class="form-control border-1 border-secondary" />
+                    <span asp-validation-for=Book.Title class="text-danger"></span>
                 </div>
                 <div class="mb-3 row p-1 row">
-                    <label asp-for=Author class="p-0"></label>
-                    <input asp-for=Author type="text" class="form-control border-1 border-secondary" />
-                    <span asp-validation-for=Author class="text-danger"></span>
+                    <label asp-for=Book.Author class="p-0"></label>
+                    <input asp-for=Book.Author type="text" class="form-control border-1 border-secondary" />
+                    <span asp-validation-for=Book.Author class="text-danger"></span>
                 </div>
                 <div class="mb-3 row p-1 row">
-                    <label asp-for=Description class="p-0"></label>
-                    <textarea asp-for=Description type="text" class="form-control border-1 border-secondary"></textarea>
-                    <span asp-validation-for=Description class="text-danger"></span>
+                    <label asp-for=Book.Description class="p-0"></label>
+                    <textarea asp-for=Book.Description type="text" class="form-control border-1 border-secondary"></textarea>
+                    <span asp-validation-for=Book.Description class="text-danger"></span>
                 </div>
                 <div class="mb-3 row p-1 row">
-                    <label asp-for=ISBN class="p-0"></label>
-                    <input asp-for=ISBN type="text" class="form-control border-1 border-secondary" />
-                    <span asp-validation-for=ISBN class="text-danger"></span>
+                    <label asp-for=Book.CategoryId class="p-0">Category</label>
+                    <select asp-for=Book.CategoryId asp-items=@Model.Categories class="form-select border-1 border-secondary">
+                        <option disabled selected>--Select Category--</option>
+                    </select>
+                    <span asp-validation-for=Book.CategoryId class="text-danger"></span>
                 </div>
                 <div class="mb-3 row p-1 row">
-                    <label asp-for=ListPrice class="p-0"></label>
-                    <input asp-for=ListPrice type="text" class="form-control border-1 border-secondary" />
-                    <span asp-validation-for=ListPrice class="text-danger"></span>
+                    <label asp-for=Book.ISBN class="p-0"></label>
+                    <input asp-for=Book.ISBN type="text" class="form-control border-1 border-secondary" />
+                    <span asp-validation-for=Book.ISBN class="text-danger"></span>
                 </div>
                 <div class="mb-3 row p-1 row">
-                    <label asp-for=Price class="p-0"></label>
-                    <input asp-for=Price type="text" class="form-control border-1 border-secondary" />
-                    <span asp-validation-for=Price class="text-danger"></span>
+                    <label asp-for=Book.ListPrice class="p-0"></label>
+                    <input asp-for=Book.ListPrice type="text" class="form-control border-1 border-secondary" />
+                    <span asp-validation-for=Book.ListPrice class="text-danger"></span>
                 </div>
                 <div class="mb-3 row p-1 row">
-                    <label asp-for=Price50 class="p-0"></label>
-                    <input asp-for=Price50 type="text" class="form-control border-1 border-secondary" />
-                    <span asp-validation-for=Price50 class="text-danger"></span>
+                    <label asp-for=Book.Price class="p-0"></label>
+                    <input asp-for=Book.Price type="text" class="form-control border-1 border-secondary" />
+                    <span asp-validation-for=Book.Price class="text-danger"></span>
                 </div>
                 <div class="mb-3 row p-1 row">
-                    <label asp-for=Price100 class="p-0"></label>
-                    <input asp-for=Price100 type="text" class="form-control border-1 border-secondary" />
-                    <span asp-validation-for=Price100 class="text-danger"></span>
+                    <label asp-for=Book.Price50 class="p-0"></label>
+                    <input asp-for=Book.Price50 type="text" class="form-control border-1 border-secondary" />
+                    <span asp-validation-for=Book.Price50 class="text-danger"></span>
+                </div>
+                <div class="mb-3 row p-1 row">
+                    <label asp-for=Book.Price100 class="p-0"></label>
+                    <input asp-for=Book.Price100 type="text" class="form-control border-1 border-secondary" />
+                    <span asp-validation-for=Book.Price100 class="text-danger"></span>
+                </div>
+                <div class="mb-3 row p-1 row">
+                    <label class="p-0">Image</label>
+                    <input name="image" type="file" class="form-control border-1 border-secondary" />
                 </div>
                 <div class="row">
                     <div class="col-6 col-md-3">
