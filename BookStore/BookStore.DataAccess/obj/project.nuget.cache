@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6i5QwXDY5G4VVfh9pxW/xkC46ZeyEFkZWbLspeqaaXUFt9KpgVSm2guJJschCnELeVbM03SEuOaFQLhxWMP/Pg==",
+  "dgSpecHash": "ODrZ+87DmeZy0O2vFy+nIgnrTnIfOh4RN9C+mDygKwDM9r5OnL1iT3YC4yLjcacimcU7HF1zJ0reD74LI6kxlA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore.DataAccess\\BookStore.DataAccess.csproj",
   "expectedPackageFiles": [

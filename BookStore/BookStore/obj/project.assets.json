@@ -4664,6 +4664,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.9",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0"
         },
         "compile": {
