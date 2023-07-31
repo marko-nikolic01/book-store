@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ODrZ+87DmeZy0O2vFy+nIgnrTnIfOh4RN9C+mDygKwDM9r5OnL1iT3YC4yLjcacimcU7HF1zJ0reD74LI6kxlA==",
+  "dgSpecHash": "7/S3TuLVlI3FH0zRjLY6JE+yU4R+RKptUvN77NLF638wtHk6FwNFvQw4qZyqWnz9TOxdik8u73rOuCtkML6hLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Marko\\Documents\\GitHub\\book-store\\BookStore\\BookStore.DataAccess\\BookStore.DataAccess.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.9\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.9.nupkg.sha512",
+    "C:\\Users\\Marko\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.9\\microsoft.aspnetcore.identity.ui.7.0.9.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\2.2.0\\microsoft.aspnetcore.jsonpatch.2.2.0.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.0\\microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512",
@@ -52,7 +53,8 @@
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
-    "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\7.0.0\\microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\7.0.9\\microsoft.extensions.fileproviders.embedded.7.0.9.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\2.2.0\\microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.9\\microsoft.extensions.identity.core.7.0.9.nupkg.sha512",
     "C:\\Users\\Marko\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.9\\microsoft.extensions.identity.stores.7.0.9.nupkg.sha512",
