@@ -19,6 +19,12 @@ builder.Services.AddRazorPages();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
+builder.Services.ConfigureApplicationCookie(options => {
+    options.LoginPath = $"/identity/login";
+    options.LogoutPath = $"/identity/logout";
+    options.AccessDeniedPath = $"/identity/Account/AccessDennied";
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
